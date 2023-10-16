@@ -40,13 +40,20 @@ export default {
       this.$router.push('/sub')
     }
   },
-  beforeMount () {
+  mounted () {
     this.showLoad = true
     this.profile = JSON.parse(localStorage.getItem('USER'))
     setInterval(() => {
         this.showLoad = false
       },1500);
-    }
+    },
+    // updated () {
+    //   this.showLoad = true
+    // this.profile = JSON.parse(localStorage.getItem('USER'))
+    // setInterval(() => {
+    //     this.showLoad = false
+    //   },1500);
+    // }
 }
 </script>
 
