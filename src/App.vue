@@ -46,10 +46,7 @@ export default {
     setInterval(() => {
         this.showLoad = false
       },1500);
-    },
-    mounted(){
-    
-  }
+    }
 }
 </script>
 
