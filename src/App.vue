@@ -47,6 +47,11 @@ export default {
         this.showLoad = false
       },1500);
     },
+    beforeMount () {
+      if (this.showLoad === true){
+      window.location.reload()
+      }
+    }
     // updated () {
     //   this.showLoad = true
     // this.profile = JSON.parse(localStorage.getItem('USER'))

@@ -57,17 +57,6 @@ export default {
     formValid () {
      // return true
       return this.emailValid && this.passwordValid
-    },
-    getTasks(){
-      this.$axios.get('/task')
-      .then((response) => {
-        this.todos = response.data.result
-        this.formatcontent()
-        console.log(this.todos)
-      })
-      .catch(error => {
-        alert('there is a request problem')
-      })
     }
   },
   methods: {
@@ -93,6 +82,17 @@ export default {
       .then((response) => {
         this.active = !this.$active
         localStorage.setItem('access_token', JSON.stringify(response.data.access_token))
+      })
+    },
+    getTasks(){
+      this.$axios.get('/task')
+      .then((response) => {
+        this.todos = response.data.result
+        this.formatcontent()
+        console.log(this.todos)
+      })
+      .catch(error => {
+        alert('there is a request problem')
       })
     },
     getProfile(){
